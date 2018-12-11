@@ -1,5 +1,5 @@
 from collections import Counter, defaultdict
-with open("input.txt") as f:
+with open("input_cha.txt") as f:
     content = f.readlines()
 
 coordinates = [[int(x.split(', ')[0]), int(x.split(', ')[1].strip())] for x in content]
@@ -35,8 +35,8 @@ def calculate_counts(bound):
                 counts[closest_coord[0]] += 1
     return counts, region
 
-counts1, _ = calculate_counts(10)
-counts2, region = calculate_counts(20)
+counts1, _ = calculate_counts(0)
+counts2, region = calculate_counts(1)
 
 finite_counts = []
 for k, v in counts1.items():
